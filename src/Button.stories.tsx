@@ -11,6 +11,9 @@ const meta = {
                 "light english": allModes["light english"],
                 "dark english": allModes["dark english"]
             }
+        },
+        hopper: {
+            height: 1000
         }
     }
 } satisfies Meta<typeof Button>;
