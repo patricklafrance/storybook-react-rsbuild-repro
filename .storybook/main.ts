@@ -7,7 +7,8 @@ const require = createRequire(import.meta.url);
 const storybookConfig: StorybookConfig = {
     framework: getAbsolutePath("storybook-react-rsbuild"),
     addons: [
-        getAbsolutePath("@storybook/addon-a11y")
+        getAbsolutePath("@storybook/addon-a11y"),
+        "./hopper-addon/index.ts"
     ],
     stories: [
         "../src/**/*.stories.(tsx|mdx)"
