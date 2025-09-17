@@ -39,7 +39,6 @@
         "storybook": "9.1.4",
         "storybook-react-rsbuild": "2.1.0",
         "typescript": "5.9.2"
-
     },
     "packageManager": "pnpm@9.15.4"
 }
