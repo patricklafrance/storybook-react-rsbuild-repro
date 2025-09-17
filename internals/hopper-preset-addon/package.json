@@ -25,7 +25,7 @@
     "react-aria-components": "^1.12.1",
     "react-dom": "^19.1.1",
     "storybook": "^9.1.4",
-    "storybook-react-rsbuild": "https://pkg.pr.new/storybook-react-rsbuild@69b7b4b"
+    "storybook-react-rsbuild": "^2.1.0"
   },
   "dependencies": {
     "chromatic": "^13.1.4"
