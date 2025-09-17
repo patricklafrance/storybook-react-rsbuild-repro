@@ -1,0 +1,45 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "globalEnv": ["USE_MSW", "APP_ENV", "URL"],
+    "ui": "tui",
+    "tasks": {
+        "dev": {
+            "dependsOn": ["^dev"],
+            "cache": false,
+            "persistent": true
+        },
+        "dev-storybook": {
+            "dependsOn": ["^dev", "@internals/hopper-preset-addon#build"],
+            "cache": false,
+            "persistent": true
+        },
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**"]
+        },
+        "build-storybook": {
+            "dependsOn": ["^build", "@internals/hopper-preset-addon#build"],
+            "outputs": ["dist/**", "storybook-static/**"],
+            "cache": false
+        },
+        "//#eslint": {
+            "outputs": ["node_modules/.cache/eslint"]
+        },
+        "eslint": {
+            "outputs": ["node_modules/.cache/eslint"]
+        },
+        "stylelint": {
+            "outputs": ["node_modules/.cache/stylelint"]
+        },
+        "//#typecheck": {
+            "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+        },
+        "typecheck": {
+            "dependsOn": ["@internals/hopper-preset-addon#build"],
+            "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+        },
+        "test": {
+            "outputs": ["node_modules/.cache/vitest/**"]
+        }
+    }
+}

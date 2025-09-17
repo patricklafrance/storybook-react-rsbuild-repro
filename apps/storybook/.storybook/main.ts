@@ -8,11 +8,12 @@ const storybookConfig: StorybookConfig = {
     framework: getAbsolutePath("storybook-react-rsbuild"),
     addons: [
         getAbsolutePath("@storybook/addon-a11y"),
-        "./hopper-addon/index.ts"
+        "@internals/hopper-preset-addon"
     ],
     stories: [
-        "../src/**/*.stories.(tsx|mdx)"
+        "../../cdn/src/**/*.stories.(tsx|mdx)"
     ],
+    staticDirs: ["public"],
     rsbuildFinal: config => {
         config.plugins = config.plugins || [];
 

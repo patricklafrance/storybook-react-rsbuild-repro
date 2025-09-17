@@ -72,14 +72,10 @@ const managerConfig: Partial<StorybookConfig> = {
 
         return [
             ...(config ?? []),
-            // addonOptions.addLocalesToolbar && require.resolve("./locale.js"),
-            // addonOptions.addColorSchemesToolbar && require.resolve("./color-scheme.js"),
-            // addonOptions.configureViewports && require.resolve("./viewports.js"),
-            // addonOptions.withDecorator && require.resolve("./decorator.js")
-            addonOptions.addLocalesToolbar && require.resolve("./locale.ts"),
-            addonOptions.addColorSchemesToolbar && require.resolve("./color-scheme.ts"),
-            addonOptions.configureViewports && require.resolve("./viewports.ts"),
-            addonOptions.withDecorator && require.resolve("./decorator.tsx")
+            addonOptions.addLocalesToolbar && require.resolve("./locale.js"),
+            addonOptions.addColorSchemesToolbar && require.resolve("./color-scheme.js"),
+            addonOptions.configureViewports && require.resolve("./viewports.js"),
+            addonOptions.withDecorator && require.resolve("./decorator.js")
         ].filter(x => x !== false);
     },
     // Preload fonts
